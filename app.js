@@ -71,7 +71,7 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$location',
 
 	$scope.weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast/daily", {callback: "JSON_CALLBACK"}, {get: {method: "JSONP"}});
 
-		$scope.weatherResult = $scope.weatherAPI.get({id: $location.hash(), appid: 'd59578edc6395145e5a089c521629d80'});
+		$scope.weatherResult = $scope.weatherAPI.get({id: $location.hash(), appid: 'INSERT API ID HERE'});
 
 		console.log($scope.weatherResult);
 
