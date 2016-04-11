@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	background: #ef4723;
+}
+
+.clearfix:after{
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+h2{
+	color: #222;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+h2 span{
+	font-family: 'Gentium Book Basic', serif;
+	text-transform: none;
+	font-size: 22px;
+}
+
+input[type="text"]{
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	background-color: #ef4723;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	color: white;
+}
+
+#searchArea{
+	margin: 0 auto;
+    position: relative;
+    width: 450px;
+}
+
+#searchResultsDisplay{
+	width: 320px;
+	background-color: #ef4723;
+	position: absolute;
+	top: 48px;
+	z-index: 50;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+#searchResultsDisplay a{
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+} 
+
+#searchResultsDisplay h3{
+	color: white;
+	font-size: 16px;
+	font-weight: 300;
+	padding-left: 10px;
+}
+
+#searchResultsDisplay h3 i{
+	float: right;
+}

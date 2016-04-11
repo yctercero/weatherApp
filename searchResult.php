@@ -1,6 +1,5 @@
-<div id="searchResultsDisplay" class="list-group">
-	<a href="#" class="list-group-item active">
-		<h3>City, State</h3>
-		<h4>Zipcode</h4>
+<div ng-repeat="s in searches" class="clearfix">
+	<a href="#">
+		<h3>{{ s.name }}, {{ s.state }} <i class="fa fa-long-arrow-right"></i></h3>
 	</a>
 </div>

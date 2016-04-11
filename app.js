@@ -20,16 +20,17 @@ weatherApp.config(function($routeProvider) {
 
 // SERVICES
 weatherApp.service('cityService', function(){
-	this.city = "New York";
+	this.city = "";
 });
 
 
 // DIRECTIVES
-weatherApp.directive('searchResult', function(){
+weatherApp.directive('search', function(){
 	return{
 		restrict: 'EA',
 		templateUrl: 'searchResult.php',
-		replace: true
+		replace: true, 
+
 	}
 });
 
@@ -38,20 +39,24 @@ weatherApp.directive('searchResult', function(){
 weatherApp.controller('homeController', ['$scope', '$resource', '$http', 'cityService', function($scope, $resource, $http, cityService) {
 	$scope.city = cityService.city;
 
-	$scope.$watch('city', function(){
-		cityService.city = $scope.city;
+	
+		$scope.$watch('city', function(){
+			cityService.city = $scope.city;
 
-		console.log(cityService.city);
-
-		$http.post('city.php', {"city": $scope.city})
-		.success(function(response) {
-			console.log(response);
-			$scope.searchResult = response;
-		})
-		.error(function(data, status){
-			console.log("error");
+			console.log(cityService.city);
+			if(cityService.city != "" && cityService.city != null){
+				$http.post('city.php', {"city": $scope.city})
+				.success(function(response) {
+					console.log(response);
+					$scope.searches = response;
+				})
+				.error(function(data, status){
+					console.log("error");
+				});
+			}
 		});
-	});
+	
+	
 }]);
 
 weatherApp.controller('forecastController', ['$scope', '$resource', 'cityService', function($scope, $resource, cityService){
