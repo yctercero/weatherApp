@@ -3,6 +3,7 @@
 	padding: 0;
 	border: none;
 	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
 }
 
 a{
@@ -18,6 +19,12 @@ body{
 	content: " ";
 	clear: both;
 	height: 0;
+}
+
+h1{
+	text-transform: uppercase;
+	font-size: 56px;
+	text-align: center;
 }
 
 h2{
@@ -79,4 +86,88 @@ input[type="text"]{
 
 #searchResultsDisplay h3 i{
 	float: right;
+	vertical-align: middle;
+}
+
+#searchResultsDisplay > div:hover{
+	background-color: white;
+}
+
+#searchResultsDisplay > div:hover a h3{
+	color: #ef4723;
+}
+
+td{
+	text-align: center;
+	color: white;
+	font-weight: lighter;
+	width: 18%;
+	font-size: 42px;
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
+}
+
+td:nth-of-type(2){
+	width: 25%;
+}
+
+	td h3{
+		text-transform: uppercase;
+		font-size: 32px;
+		font-weight: lighter;
+	}
+
+	td h5{
+		font-size: 16px;
+		text-align: center;
+	}
+
+	td h6{
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+
+.dayWeatherWrap{
+	width: 70%;
+	margin: 0 auto;
+}
+
+h6 {
+	padding: 20px;
+}
+
+h6 a{
+	font-size: 18px;
+	color: white;
+	font-weight: lighter;
+}
+
+@media screen and (max-width: 650px){
+	.dayWeatherWrap{
+		width: 90%;
+	}
+
+	h6 a{
+		font-size: 14px;
+	}
+
+	td{
+		font-size: 32px;
+	}
+
+	td h3{
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: lighter;
+	}
+
+	td h5{
+		font-size: 14px;
+		text-align: center;
+	}
+
+	td h6{
+		text-transform: uppercase;
+		font-size: 16px;
+	}
 }
